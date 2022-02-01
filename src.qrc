@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/fonts">
+        <file>TH-Tshyn-P0.ttf</file>
+        <file>TH-Tshyn-P1.ttf</file>
+        <file>TH-Tshyn-P2.ttf</file>
+        <file>TH-Tshyn-P16.ttf</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>ns4.png</file>
+    </qresource>
+</RCC>

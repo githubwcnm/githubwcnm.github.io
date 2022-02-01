@@ -1,0 +1,1 @@
+em++ wasm_main.cpp -O3 -std=c++17 --bind -s WASM=1 -o index.html --shell-file index_t.html
