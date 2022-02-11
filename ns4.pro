@@ -4,7 +4,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++17 resources_big
 
-VERSION = 4.0.0.1
+VERSION = 4.0.0.2
 RC_ICONS = ns4.ico
 QMAKE_TARGET_COPYRIGHT = "Copyright cnmmail163@163.com All rights reserved."
 QMAKE_TARGET_DESCRIPTION = "A text steganography tool"
