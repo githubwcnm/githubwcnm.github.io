@@ -168,14 +168,10 @@
     const 密文框 = document.querySelector('#密文区 textarea')
 
     var Module = {
-        preRun: [],
-        postRun: [],
-        monitorRunDependencies: 剩余 => {
-            if (剩余 === 0) {
-                document.getElementById('加载状态').hidden = true
-                document.getElementById('俩框').style.display = 'flex'
-                原文框.focus()
-            }
+        postRun: () => {
+            document.getElementById('加载状态').hidden = true
+            document.getElementById('俩框').style.display = 'flex'
+            原文框.focus()
         }
     }
 
