@@ -5,7 +5,7 @@
     <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
           name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    <meta name="description" 
+    <meta name="description"
           content="喵喵隐者4 可以把一段文本隐藏在形如“ٟ݂ٟ݁ؒؗ喵呜。 ާ݄֧ٞ֞݁ٚ֨喵。 ֞ާٞ֓”的文本中，实现“加密”功能，同时也提供了相应的“解密”功能。">
     <title>喵喵隐者 4 - 一个由cnmmail163@163.com制作的文本隐写工具</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
@@ -16,7 +16,7 @@
 
         header {
             z-index: 1;
-            position: fixed;
+            position: relative;
             left: 0;
             top: 0;
             display: flex;
@@ -53,6 +53,14 @@
             background-color: rgba(0, 0, 0, 0.3);
         }
 
+        #背景 {
+            left: 0;
+            top: 0;
+            width: auto;
+            height: 100%;
+            position: fixed
+        }
+
         #俩框 {
             display: none;
             justify-content: space-between;
@@ -73,6 +81,7 @@
         }
 
         textarea {
+            background-color: transparent;
             width: 100%;
             height: 100%;
             resize: none;
@@ -111,6 +120,11 @@
                 background-size: 1.5vw;
             }
 
+            #背景 {
+                width: 100%;
+                height: auto;
+            }
+
             #俩框 {
                 margin: 5vw 8vw;
                 padding: 0 5vw;
@@ -135,9 +149,20 @@
             }
         }
     </style>
-    <!-- Clarity tracking code for https://githubwcnm.github.io/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "aq11ecnv4l");</script>
+    <!-- Clarity tracking code for https://githubwcnm.github.io/ -->
+    <script>    (function (c, l, a, r, i, t, y) {
+        c[a] = c[a] || function () {
+            (c[a].q = c[a].q || []).push(arguments)
+        };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i + "?ref=bwt";
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "aq11ecnv4l");</script>
 </head>
 <body>
+<video id="背景" src="background.mp4" loop autoplay muted></video>
 <header>
     <h1>喵喵隐者4</h1>
     <a href="https://gxlt.lanzouq.com/ib1Wwzwpgcf" target="_blank">安卓版</a>
