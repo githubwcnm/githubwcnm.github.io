@@ -2,9 +2,9 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-CONFIG += c++17 resources_big
+CONFIG += c++20 resources_big
 
-VERSION = 4.0.0.2
+VERSION = 4.0.0.3
 RC_ICONS = ns4.ico
 QMAKE_TARGET_COPYRIGHT = "Copyright cnmmail163@163.com All rights reserved."
 QMAKE_TARGET_DESCRIPTION = "A text steganography tool"
@@ -43,4 +43,7 @@ DISTFILES += \
     android/gradlew.bat \
     android/res/values/libs.xml
 
-ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
+contains(ANDROID_TARGET_ARCH,armeabi-v7a) {
+    ANDROID_PACKAGE_SOURCE_DIR = \
+        $$PWD/android
+}

@@ -20,6 +20,31 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="copyLeft">
+        <property name="text">
+         <string>复制原文</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pasteLeft">
+        <property name="text">
+         <string>粘贴原文</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="clearLeft">
+        <property name="text">
+         <string>清空原文</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
      <widget class="QPlainTextEdit" name="left">
       <property name="placeholderText">
        <string>原文</string>
@@ -27,50 +52,25 @@
      </widget>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QPushButton" name="copyLeft">
-        <property name="text">
-         <string>复制</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pasteLeft">
-        <property name="text">
-         <string>粘贴</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="clearLeft">
-        <property name="text">
-         <string>清空</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item>
      <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
        <widget class="QPushButton" name="copyRight">
         <property name="text">
-         <string>复制</string>
+         <string>复制密文</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="pasteRight">
         <property name="text">
-         <string>粘贴</string>
+         <string>粘贴密文</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="clearRight">
         <property name="text">
-         <string>清空</string>
+         <string>清空密文</string>
         </property>
        </widget>
       </item>
