@@ -42,7 +42,8 @@ MainWindow::~MainWindow()
 void MainWindow::connectLeft() {
     connect(ui->left, &QPlainTextEdit::textChanged, this, [this]{
         ui->right->disconnect();
-        ui->right->setPlainText(QString::fromStdWString(ns4::encode(ui->left->toPlainText().toStdString())));
+        const auto str = ui->left->toPlainText().toStdString();
+        ui->right->setPlainText(QString::fromStdWString(str.empty() ? L"": ns4::encode(str)));
         connectRight();
     });
 }
@@ -50,7 +51,8 @@ void MainWindow::connectLeft() {
 void MainWindow::connectRight() {
     connect(ui->right, &QPlainTextEdit::textChanged, this, [this]{
         ui->left->disconnect();
-        ui->left->setPlainText(QString::fromStdString(ns4::decode(ui->right->toPlainText().toStdWString())));
+        const auto str = ui->right->toPlainText().toStdWString();
+        ui->left->setPlainText(QString::fromStdString(str.empty() ? "" : ns4::decode(str)));
         connectLeft();
     });
 }
